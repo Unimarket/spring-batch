@@ -1,17 +1,13 @@
 package org.springframework.batch.item.database;
 
-import static org.easymock.EasyMock.createMock;
-import static org.easymock.EasyMock.createNiceMock;
-import static org.easymock.EasyMock.expect;
-import static org.easymock.EasyMock.replay;
-import static org.easymock.EasyMock.verify;
-
 import org.hibernate.Query;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.classic.Session;
 import org.junit.Test;
 import org.springframework.batch.item.ExecutionContext;
 import org.springframework.batch.item.sample.Foo;
+
+import static org.easymock.EasyMock.*;
 
 /**
  * Tests for {@link HibernateCursorItemReader} using standard hibernate {@link Session}.
